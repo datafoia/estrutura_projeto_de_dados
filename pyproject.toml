@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "estrutura-projeto-dados"
+version = "1.0"
+description = "Projeto que cria um padrao de estrutura de pastas para um projeto de dados"
+authors = ["datafoia <datafoia@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.1"
+numpy = "^1.26.4"
+so = "^0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
