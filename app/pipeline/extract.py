@@ -1,9 +1,8 @@
-import os
 import glob
+import os
+from typing import List
 
 import pandas as pd
-
-from typing import List
 
 
 def extract_data(input_path: str) -> List[pd.DataFrame]:
