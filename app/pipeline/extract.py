@@ -15,7 +15,7 @@ def extract_data(input_path: str) -> List[pd.DataFrame]:
     return: lista de dataframes
     """
 
-    all_files = glob.glob(os.path.join(input_path, "*.xlsx"))
+    all_files = glob.glob(os.path.join(input_path, '*.xlsx'))
 
     data_frame_list = []
 
@@ -24,6 +24,7 @@ def extract_data(input_path: str) -> List[pd.DataFrame]:
 
     return data_frame_list
 
-if __name__ == "__main__":
-    data_frame_list = extract_data("data/input")
+
+if __name__ == '__main__':
+    data_frame_list = extract_data('data/input')
     print(data_frame_list)
