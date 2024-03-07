@@ -11,7 +11,7 @@
 - Adicionar bibliotecas → `poetry add`
 - Criar pasta `.vscode`
 - Criar arquivo `settings.json` na pasta do `.vscode`  e inserir o código abaixo para desocultar a pasta do git.
-    
+
     ```json
     {
         "files.exclude": {
@@ -19,7 +19,7 @@
         }
     }
     ```
-    
+
 - Criar o arquivo `.gitignore` para determinar quais arquivos não devem ir para o GitHub → `ignr -p python > .gitigone`  *(modelo .gitignore da toptal)*
 - Criar arquivo readme → `touch README.md`
 - Criar pasta de código `app`
@@ -52,7 +52,7 @@
 - PEP8 → padrão de código em python
 - Adicionar bibliotecas de padronização de código:
     - `isort` → ordenação de imports e from. *[para utilizar digitar no terminal* `isort .` *]*
-    - `blue` → formatação do código. *[para utilizar digitar no terminal* `blue .` *]*
+    - `black`→ formatação do código. *[para utilizar digitar no terminal* `black .` *] - Há a biblioteca `blue` também(vai da preferência)*
     - `pydocstyle`  → mostra todos as partes do código que deveriam ter uma `docstring` . *[para utilizar digitar no terminal*  `pydocstyle .` *]*
 
 ### 6. Automatizar Tarefas
@@ -63,7 +63,7 @@
 ```json
 [tool.taskipy.tasks]
 
-format = "isort . && blue ."
+format = "isort . && black ."
 ```
 
 Adicionar o código acima no arquivo do `pyproject.toml`
@@ -77,8 +77,24 @@ Adicionar o código acima no arquivo do `pyproject.toml`
 - Adicionar algumas bibliotecas → `poetry add mkdocstrings-python pygments mkdocs-material pymdown-extensions`
 - No `mkdocs.yml` eu consigo personalizar meu site do mkdocs
 - Publicar site no GitHub pages → `mkdocs gh-deploy`
-- 
+- Utilizar ChatGPT para ajudar a criar o markdown (Notion já está no formato de markdown)
+
+### 8. Pré-Commir
+
+- Instalar biblioteca de pre-commit → `poetry add pre-commit`
+- Criar arquivo chamado: `.pre-commit-config.yaml`
+- Utilizar site pre-commit para pegar instruções para o que deseja fazer de pre-commit
+- Instalar pre-commit →  `pre-commit install`
+- Sempre quando fizer um commit será feito a validação dos testes configurados - CI da máquinda
+
+### 9. CI
+
+- Criar pasta `.github`  e dentro dessa pasta criar pasta `workflow`
+- Criar arquivo `ci.yml` [o nome pode ser o que você quiser]
+- Colocar o código do `yml` , no github actions consegue encontrar o que precisa ter no código
 
 ## Links
 
-Repositório: https://github.com/datafoia/estrutura_projeto_de_dados
+Repositório: https://github.com/lvgalvao/DataProjectStarterKit
+
+Meu repositório: https://github.com/datafoia/estrutura_projeto_de_dado
