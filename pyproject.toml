@@ -18,6 +18,8 @@ pydocstyle = "^6.3.0"
 taskipy = "^1.12.2"
 mkdocs = "^1.5.3"
 pymdown-extensions = "^10.7.1"
+pre-commit = "^3.6.2"
+pip-audit = "^2.7.2"
 
 
 [build-system]
