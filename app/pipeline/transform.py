@@ -4,7 +4,6 @@ import pandas as pd
 
 
 def concat_dataframes(data_frame_list: List[pd.DataFrame]) -> pd.DataFrame:
-
     """
     Função para transformar uma lista de dataframes em um dataframe
     """
