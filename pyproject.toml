@@ -13,20 +13,30 @@ so = "^0.5"
 openpyxl = "^3.1.2"
 pytest = "^8.0.2"
 isort = "^5.13.2"
-blue = "^0.9.1"
 pydocstyle = "^6.3.0"
 taskipy = "^1.12.2"
 mkdocs = "^1.5.3"
 pymdown-extensions = "^10.7.1"
 pre-commit = "^3.6.2"
 pip-audit = "^2.7.2"
+black = "^24.2.0"
 
+[tool.isort]
+profile = "black"
+known_third_party = []
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
-format = "isort . && blue ."
-test = "poetry run pytest -v"
+format = """
+isort .
+black .
+"""
 kill = "kill -9 $(lsof -t -i :8000)"
+test = "pytest -v"
+run = """
+python3 app/main.py
+"""
+doc = "mkdocs serve"
